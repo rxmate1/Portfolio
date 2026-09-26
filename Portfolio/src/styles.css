@@ -1,0 +1,122 @@
+:root {
+  --dark-red: #6D0808;
+  --near-black-red: #2D0000;
+  --sage: #757D6F;
+  --cream: #EEEAD7;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--near-black-red);
+  font-family: system-ui, sans-serif;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 1rem;
+}
+
+.img-size-profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--dark-red);
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.colorred {
+  background-color: var(--dark-red);
+  color: var(--cream);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.colorred h1 {
+  color: var(--cream);
+  margin: 0;
+}
+
+section p {
+  color: var(--sage);
+  line-height: 1.6;
+}
+
+h2 {
+  color: var(--dark-red);
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--dark-red);
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--near-black-red);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--sage);
+  font-size: 0.9rem;
+}
+
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0;
+}
+
+.skill-item {
+  background-color: var(--cream);
+  border: 1px solid var(--sage);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 140px;
+}
+
+.skill-name {
+  color: var(--near-black-red);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.skill-level {
+  color: var(--dark-red);
+  font-size: 0.8rem;
+}
+
+.skill-category {
+  color: var(--sage);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+button {
+  background-color: var(--cream);
+  border: 1px solid var(--sage);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 200px;
+}
+
