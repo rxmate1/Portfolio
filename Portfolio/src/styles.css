@@ -1,13 +1,11 @@
 :root {
-  --dark-red: #6D0808;
-  --near-black-red: #2D0000;
-  --sage: #757D6F;
-  --cream: #EEEAD7;
+  --neon-lime: #C8FF3D;
+  --violet-ink: #2D1B69;
 }
 
 body {
-  background-color: var(--cream);
-  color: var(--near-black-red);
+  background-color: var(--violet-ink);
+  color: #f2f2f2;
   font-family: system-ui, sans-serif;
   margin: 0;
 }
@@ -23,7 +21,7 @@ header {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--dark-red);
+  border: 3px solid var(--neon-lime);
 }
 
 main {
@@ -32,9 +30,21 @@ main {
   padding: 0 1.5rem 3rem;
 }
 
+main h1 {
+color: #C8FF3D;
+}
+
+.Velkommen {
+  margin-bottom: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
 .colorred {
-  background-color: var(--dark-red);
-  color: var(--cream);
+  background-color: var(--violet-ink);
+  color: var(--violet-ink);
   padding: 1.5rem;
   border-radius: 8px;
   text-align: center;
@@ -42,34 +52,59 @@ main {
 }
 
 .colorred h1 {
-  color: var(--cream);
+  color: var(--neon-lime);
   margin: 0;
 }
 
 section p {
-  color: var(--sage);
+  color: #c9c3e0;
   line-height: 1.6;
 }
 
+section a {
+  text-decoration: none;
+}
+
+section h3 a {
+   color: #f2f2f2;
+}
+
+.project-card {
+  display: block;
+  border: 1px solid var(--neon-lime);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  text-decoration: none;
+  max-width: 200px;
+}
 h2 {
-  color: var(--dark-red);
+  color: var(--neon-lime);
   margin-top: 1.5rem;
 }
 
 a {
-  color: var(--dark-red);
+  color: var(--neon-lime);
   font-weight: 600;
 }
 
 a:hover {
-  color: var(--near-black-red);
+  color: #f2f2f2;
 }
 
 footer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
   padding: 2rem;
-  color: var(--sage);
+  color: #c9c3e0;
   font-size: 0.9rem;
+}
+
+footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .skills-list {
@@ -81,42 +116,60 @@ footer {
 }
 
 .skill-item {
-  background-color: var(--cream);
-  border: 1px solid var(--sage);
+  background-color: var(--violet-ink);
+  border: 1px solid var(--neon-lime);
   border-radius: 8px;
   padding: 0.6rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  min-width: 140px;
+  min-width: 70px;
 }
 
 .skill-name {
-  color: var(--near-black-red);
+  color: #f2f2f2;
   font-weight: 600;
   font-size: 1rem;
 }
 
 .skill-level {
-  color: var(--dark-red);
+  color: var(--neon-lime);
   font-size: 0.8rem;
 }
 
 .skill-category {
-  color: var(--sage);
+  color: #c9c3e0;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 button {
-  background-color: var(--cream);
-  border: 1px solid var(--sage);
+  background-color: var(--violet-ink);
+  color: #f2f2f2;
+  border: 1px solid var(--neon-lime);
   border-radius: 8px;
   padding: 0.6rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
   min-width: 200px;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 
+button:hover {
+  background-color: var(--neon-lime);
+  color: var(--violet-ink);
+}
+
+.Fiks-ikoner {
+  display: flex;
+  flex-direction: column;
+}
+
+.Fiks-ikoner-1 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}

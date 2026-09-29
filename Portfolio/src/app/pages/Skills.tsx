@@ -10,10 +10,21 @@ export interface SkillProps {
     Category: category;
 }
 
+
+
 export function Skills({ Skills }: { Skills: SkillProps[] }) {
 
     
-   const [openCategory, setOpenCategory] = useState<category | null>(null);
+  const [openCategories, setOpenCategories] = useState<category[]>([]);
+
+  function toggleCategory (cat: category) {
+  if (openCategories.includes(cat)) {
+    setOpenCategories(openCategories.filter(c => c != cat))
+  } 
+  else {
+    setOpenCategories([...openCategories, cat]);
+  }
+}
 
   const språkSkills = Skills.filter(skill => skill.Category === "Språk");
   const rammeverkSkills = Skills.filter(skill => skill.Category === "Rammeverk");
@@ -22,8 +33,8 @@ export function Skills({ Skills }: { Skills: SkillProps[] }) {
 
   return (
     <>
-      <button onClick={() => setOpenCategory("Språk")}>Språk</button>
-      {openCategory === "Språk" && (
+      <button onClick={() => toggleCategory("Språk")}>Språk</button>
+      {openCategories.includes("Språk") && (
       <ul className="skills-list">
         {språkSkills.map(skill => (
           <li key={skill.Name} className="skill-item">
@@ -34,8 +45,8 @@ export function Skills({ Skills }: { Skills: SkillProps[] }) {
         ))}
       </ul>
     )}
-      <button onClick={() => setOpenCategory("Rammeverk")}>Rammeverk</button>
-      {openCategory === "Rammeverk" && (
+      <button onClick={() => toggleCategory("Rammeverk")}>Rammeverk</button>
+      {openCategories.includes("Rammeverk") && (
       <ul className="skills-list">
         {rammeverkSkills.map(skill => (
           <li key={skill.Name} className="skill-item">
@@ -47,8 +58,8 @@ export function Skills({ Skills }: { Skills: SkillProps[] }) {
       </ul>
       )}
 
-      <button onClick={() => setOpenCategory("Verktøy")}>Verktøy</button>
-      {openCategory === "Verktøy" &&(
+      <button onClick={() => toggleCategory("Verktøy")}>Verktøy</button>
+      {openCategories.includes("Verktøy") && (
       <ul className="skills-list">
         {verktøySkills.map(skill => (
           <li key={skill.Name} className="skill-item">
@@ -60,8 +71,8 @@ export function Skills({ Skills }: { Skills: SkillProps[] }) {
       </ul>
       )}
 
-      <button onClick={() => setOpenCategory ("Andre erfaringer")}>Andre erfaringer</button>
-      {openCategory === "Andre erfaringer" && (
+      <button onClick={() => toggleCategory("Andre erfaringer")}>Andre erfaringer</button>
+      {openCategories.includes("Andre erfaringer") && (
       <ul className="skills-list">
         {andreErfaringerSkills.map(skill => (
           <li key={skill.Name} className="skill-item">
