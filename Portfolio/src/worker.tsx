@@ -1,7 +1,7 @@
 import { defineApp } from "rwsdk/worker";
 import { route, render } from "rwsdk/router";
 
-import { Document } from "@/app/Document"; // må matche filnavnet Document.tsx
+import { Document } from "@/app/document";
 import { setCommonHeaders } from "@/app/headers";
 import { HomePage } from "@/app/pages/HomePage";
 import { Bussruteplanlegger } from "./app/pages/Bussruteplanlegger";
