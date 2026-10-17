@@ -33,7 +33,7 @@ export function Skills({ Skills }: { Skills: SkillProps[] }) {
 
   return (
     <>
-      <button onClick={() => toggleCategory("Språk")}>Språk</button>
+      <button aria-expanded={openCategories.includes("Språk")} onClick={() => toggleCategory("Språk")}>Språk</button>
       {openCategories.includes("Språk") && (
       <ul className="skills-list">
         {språkSkills.map(skill => (
@@ -45,7 +45,7 @@ export function Skills({ Skills }: { Skills: SkillProps[] }) {
         ))}
       </ul>
     )}
-      <button onClick={() => toggleCategory("Rammeverk")}>Rammeverk</button>
+      <button aria-expanded={openCategories.includes("Rammeverk")} onClick={() => toggleCategory("Rammeverk")}>Rammeverk</button>
       {openCategories.includes("Rammeverk") && (
       <ul className="skills-list">
         {rammeverkSkills.map(skill => (
@@ -58,7 +58,7 @@ export function Skills({ Skills }: { Skills: SkillProps[] }) {
       </ul>
       )}
 
-      <button onClick={() => toggleCategory("Verktøy")}>Verktøy</button>
+      <button aria-expanded={openCategories.includes("Verktøy")} onClick={() => toggleCategory("Verktøy")}>Verktøy</button>
       {openCategories.includes("Verktøy") && (
       <ul className="skills-list">
         {verktøySkills.map(skill => (
@@ -71,7 +71,7 @@ export function Skills({ Skills }: { Skills: SkillProps[] }) {
       </ul>
       )}
 
-      <button onClick={() => toggleCategory("Andre erfaringer")}>Andre erfaringer</button>
+      <button aria-expanded={openCategories.includes("Andre erfaringer")} onClick={() => toggleCategory("Andre erfaringer")}>Andre erfaringer</button>
       {openCategories.includes("Andre erfaringer") && (
       <ul className="skills-list">
         {andreErfaringerSkills.map(skill => (

@@ -113,6 +113,22 @@ main ul:not(.skills-list) li::before {
   color: var(--neon-lime);
 }
 
+/* ---------- Banner ---------- */
+.banner {
+  position: relative;
+  width: 100%;
+  height: clamp(80px, 12vw, 160px);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center; /* beholder det lyse partiet på mobil */
+}
+
 /* ---------- Header / profil ---------- */
 header {
   display: flex;
@@ -193,6 +209,11 @@ section h3 a.project-card:hover {
 }
 
 /* ---------- Ferdigheter ---------- */
+.skills-hint {
+  margin-top: -0.5rem;
+  font-size: 0.9rem;
+}
+
 button {
   width: 100%;
   display: flex;
@@ -214,6 +235,10 @@ button::after {
   content: "＋";
   color: var(--neon-lime);
   transition: color 0.2s;
+}
+
+button[aria-expanded="true"]::after {
+  content: "−";
 }
 
 button:hover {
@@ -289,6 +314,14 @@ footer a,
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.ai-note {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
 
 /* ---------- Animasjon ---------- */
